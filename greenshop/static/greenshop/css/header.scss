@@ -1,0 +1,49 @@
+// header.html styles
+.header{
+  &__row{
+    padding: 25px 0px 17px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.1px solid #46A35880;
+    .logo{
+      display: flex;
+      &__img{
+        margin: 0px 5px 0px 0px;
+      }
+    }
+    .menu{
+      max-width: 350px;
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      /* TODO: В дальнейшем реализовать актив переход для линков */
+      &__link{
+        font-size: 16px;
+        line-height: 20px;
+        color: #3D3D3D;
+      }
+      &__link:hover{
+        font-weight: 700;
+      }
+    }
+    .shop-elements{
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 210px;
+      &__btn > button {
+        color: #fff;
+        padding: 8px 17px;
+        background-color: #46A358;
+        border-radius: 5px;
+      }
+      &__btn > button:hover{
+        background-color: #319647FF;
+      }
+    }
+  }
+}

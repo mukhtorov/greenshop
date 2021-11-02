@@ -1,0 +1,24 @@
+{% load static %}
+{% block header %}
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <div class="logo">
+                    <img class="logo__img" src="{% static 'greenshop/images/logo.svg' %}" alt="" >
+                    <img class="logo__text" src="{% static 'greenshop/images/Group.svg' %}" alt="" >
+                </div>
+                <div class="menu">
+                    <a href="#!" class="menu__link bold">Home</a>
+                    <a href="#!" class="menu__link">Shop</a>
+                    <a href="#!" class="menu__link">Plant Care</a>
+                    <a href="#!" class="menu__link">Blogs</a>
+                </div>
+                <div class="shop-elements">
+                    <img src="{% static 'greenshop/images/search.svg' %}" alt="search" class="shop-elements__search">
+                    <img src="{% static 'greenshop/images/basket.svg' %}" alt="basket" class="shop-elements__basket">
+                    <a href="#!" class="shop-elements__btn"><button>Login</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}

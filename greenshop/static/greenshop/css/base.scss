@@ -1,0 +1,12 @@
+@import "fonts";
+@import "reset_styles";
+@import "header";
+@import "footer";
+
+body{
+  font-family: CeraPro;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
