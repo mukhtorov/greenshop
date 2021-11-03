@@ -5,11 +5,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 0.1px solid #46A35880;
+    border-bottom: 0.3px solid #46A35880;
     .logo{
       display: flex;
       &__img{
-        margin: 0px 5px 0px 0px;
+        margin: 0px 6px 0px 0px;
       }
     }
     .menu{
@@ -19,6 +19,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      margin: 0px 15px;
       /* TODO: В дальнейшем реализовать актив переход для линков */
       &__link{
         font-size: 16px;
@@ -31,18 +32,15 @@
     }
     .shop-elements{
       display: flex;
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       justify-content: space-between;
       align-items: center;
       max-width: 210px;
-      &__btn > button {
+      &__button > button {
         color: #fff;
         padding: 8px 17px;
         background-color: #46A358;
         border-radius: 5px;
-      }
-      &__btn > button:hover{
-        background-color: #319647FF;
       }
     }
   }

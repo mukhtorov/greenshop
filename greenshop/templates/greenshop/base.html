@@ -15,7 +15,21 @@
 {% include 'greenshop/header.html' %}
 {% block header %}{% endblock %}
     <div class="welcome">
-
+        <div class="container">
+            <div class="welcome__row">
+                <div class="welcome__body column">
+                    <div class="welcome-title-wrapper">
+                        <div class="welcome__pre-title">Welcome to GreenShop</div>
+                        <div class="welcome__title">Let’s Make a Better <span>Planet</span></div>
+                        <div class="welcome__about">We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!</div>
+                    </div>
+                    <a class="welcome__button button" href="#!"><button>SHOP NOW</button></a>
+                </div>
+                <div class="welcome__image column">
+                    <img src="{% static 'greenshop/images/welcome-img.png' %}" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -31,107 +31,6 @@
   font-weight: 900;
   font-style: normal; }
 
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-/*
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-body {
-    line-height:1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-//change colours to suit your needs
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-//change colours to suit your needs
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-//change border colour to suit your needs
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-input, select {
-    vertical-align:middle;
-}
-*/
 * {
   padding: 0;
   margin: 0;
@@ -195,11 +94,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 0.1px solid #46A35880; }
+  border-bottom: 0.3px solid #46A35880; }
   .header__row .logo {
     display: flex; }
     .header__row .logo__img {
-      margin: 0px 5px 0px 0px; }
+      margin: 0px 6px 0px 0px; }
   .header__row .menu {
     max-width: 350px;
     display: flex;
@@ -207,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 0px 15px;
     /* TODO: В дальнейшем реализовать актив переход для линков */ }
     .header__row .menu__link {
       font-size: 16px;
@@ -216,23 +116,91 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: 700; }
   .header__row .shop-elements {
     display: flex;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     justify-content: space-between;
     align-items: center;
     max-width: 210px; }
-    .header__row .shop-elements__btn > button {
+    .header__row .shop-elements__button > button {
       color: #fff;
       padding: 8px 17px;
       background-color: #46A358;
       border-radius: 5px; }
-    .header__row .shop-elements__btn > button:hover {
-      background-color: #319647FF; }
 
 body {
   font-family: CeraPro; }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0px 15px; }
+
+.button > button:hover {
+  background-color: #319647FF; }
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px; } }
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px; }
+  .header__row .shop-elements {
+    max-width: 170px; }
+  .header .menu {
+    max-width: 270px; }
+  .welcome__title {
+    font-size: 50px;
+    line-height: 52px; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none; } }
+
+.column {
+  flex: 0 1 50%; }
+
+.welcome__row {
+  display: flex;
+  padding: 25px; }
+
+.welcome__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly; }
+
+.welcome__pre-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase; }
+
+.welcome__title {
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 70px;
+  text-transform: uppercase; }
+  .welcome__title span {
+    color: #279827; }
+
+.welcome__about {
+  font-size: 14px;
+  line-height: 24px;
+  color: #727272; }
+
+.welcome__button > button {
+  color: #fff;
+  background-color: #46A358;
+  padding: 10px 26px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px; }
+
+.welcome__image {
+  text-align: center; }
+
+.welcome__image > img {
+  max-width: 100%; }
 
 /*# sourceMappingURL=base.css.map */

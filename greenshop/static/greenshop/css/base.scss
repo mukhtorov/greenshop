@@ -6,7 +6,99 @@
 body{
   font-family: CeraPro;
 }
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0px 15px;
+}
+.button > button:hover{
+  background-color: #319647FF;
+}
+.column{
+  flex: 0 1 50%;
+}
+
+
+.welcome{
+  &__row{
+    display: flex;
+    padding: 25px;
+
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+  }
+  &__pre-title{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 70px;
+    text-transform: uppercase;
+    span{
+      color: #279827;
+    }
+  }
+  &__about{
+    font-size: 14px;
+    line-height: 24px;
+    color: #727272;
+  }
+  &__button>button{
+    color: #fff;
+    background-color: #46A358;
+    padding: 10px 26px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 5px;
+  }
+
+  &__image{
+    text-align: center;
+    //position: relative;
+  }
+  &__image >img{
+    max-width: 100%;
+  }
+}
+
+// Breakpoints
+@media (max-width: 1200px) {
+  .container{
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px){
+  .container{
+    max-width: 750px;
+  }
+  .header{
+    &__row{
+      .shop-elements{
+        max-width: 170px;
+  }
+    }
+    .menu{
+      max-width: 270px;
+    }
+  }
+  .welcome__title{
+    font-size: 50px;
+    line-height: 52px;
+  }
+}
+@media (max-width: 767px) {
+  .container{
+    max-width: none;
+  }
 }
