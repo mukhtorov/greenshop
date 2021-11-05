@@ -137,31 +137,13 @@ body {
 .button > button:hover {
   background-color: #319647FF; }
 
-@media (max-width: 1200px) {
-  .container {
-    max-width: 970px; } }
-
-@media (max-width: 992px) {
-  .container {
-    max-width: 750px; }
-  .header__row .shop-elements {
-    max-width: 170px; }
-  .header .menu {
-    max-width: 270px; }
-  .welcome__title {
-    font-size: 50px;
-    line-height: 52px; } }
-
-@media (max-width: 767px) {
-  .container {
-    max-width: none; } }
-
-.column {
+.column2 {
   flex: 0 1 50%; }
 
 .welcome__row {
   display: flex;
-  padding: 25px; }
+  padding: 25px;
+  position: relative; }
 
 .welcome__body {
   display: flex;
@@ -198,9 +180,29 @@ body {
   border-radius: 5px; }
 
 .welcome__image {
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .welcome__image > img {
   max-width: 100%; }
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px; } }
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px; }
+  .header__row .shop-elements {
+    max-width: 170px; }
+  .header .menu {
+    max-width: 270px; }
+  .welcome__title {
+    font-size: 50px;
+    line-height: 52px; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none; } }
 
 /*# sourceMappingURL=base.css.map */

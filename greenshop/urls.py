@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+import apps
 from greenshop import settings
 from greenshop.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home')
+    path('', home, name='home'),
+    # path('plants/', include('apps.shop.urls')),
 ]
 
 if settings.DEBUG:
