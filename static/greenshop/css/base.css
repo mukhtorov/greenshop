@@ -130,7 +130,7 @@ body {
   font-family: CeraPro; }
 
 .container {
-  max-width: 1200px;
+  min-width: 767px;
   margin: 0 auto;
   padding: 0px 15px; }
 
@@ -140,51 +140,47 @@ body {
 .column2 {
   flex: 0 1 50%; }
 
-.welcome__row {
-  display: flex;
-  padding: 25px;
-  position: relative; }
-
-.welcome__body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly; }
-
-.welcome__pre-title {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase; }
-
-.welcome__title {
-  font-weight: 900;
-  font-size: 70px;
-  line-height: 70px;
-  text-transform: uppercase; }
-  .welcome__title span {
-    color: #279827; }
-
-.welcome__about {
-  font-size: 14px;
-  line-height: 24px;
-  color: #727272; }
-
-.welcome__button > button {
-  color: #fff;
-  background-color: #46A358;
-  padding: 10px 26px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  border-radius: 5px; }
-
-.welcome__image {
-  text-align: center;
-  position: relative; }
-
-.welcome__image > img {
-  max-width: 100%; }
+.welcome {
+  margin: 0px 0px 45px 0px; }
+  .welcome__row {
+    display: flex;
+    padding: 25px;
+    position: relative;
+    background-color: #F5F5F580; }
+  .welcome__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly; }
+  .welcome__pre-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase; }
+  .welcome__title {
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 70px;
+    text-transform: uppercase; }
+    .welcome__title span {
+      color: #279827; }
+  .welcome__about {
+    font-size: 14px;
+    line-height: 24px;
+    color: #727272; }
+  .welcome__button > button {
+    color: #fff;
+    background-color: #46A358;
+    padding: 10px 26px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 5px; }
+  .welcome__image {
+    text-align: center;
+    position: relative; }
+  .welcome__image > img {
+    max-width: 100%; }
 
 @media (max-width: 1200px) {
   .container {

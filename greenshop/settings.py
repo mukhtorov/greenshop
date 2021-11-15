@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.shop.apps.ShopConfig',
-    'sass_processor'
-    # 'sass_processor.templatetags.sass_tags',
+    'sass_processor',
 
 ]
 
@@ -123,7 +122,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'static'
 
 # Path to save compiled .scss files
-# SASS_PROCESSOR_ROOT = STATIC_ROOT / 'SCSS'
+# SASS_PROCESSOR_ROOT = BASE_DIR / 'scss-processed'
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(BASE_DIR, 'greenshop/static/'),
 ]

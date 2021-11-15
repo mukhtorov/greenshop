@@ -17,14 +17,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-import apps
 from greenshop import settings
 from greenshop.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
-    # path('plants/', include('apps.shop.urls')),
+    path('', home),
+    path('plants/', include('apps.shop.urls', namespace='shop')),
 ]
 
 if settings.DEBUG:

@@ -8,7 +8,8 @@ body{
 }
 
 .container{
-  max-width: 1200px;
+  //max-width: 1200px;
+  min-width: 767px;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -21,10 +22,12 @@ body{
 
 
 .welcome{
+  margin: 0px 0px 45px 0px;
   &__row{
     display: flex;
     padding: 25px;
     position: relative;
+    background-color: #F5F5F580;
   }
   &__body{
     display: flex;
@@ -73,8 +76,13 @@ body{
   &__image >img:last-child{}
 }
 
+
+.shop{
+
+}
+
 // Breakpoints
-@media (max-width: 1200px) {
+@media (max-width: 1200px){
   .container{
     max-width: 970px;
   }
@@ -98,11 +106,12 @@ body{
     line-height: 52px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px){
   .container{
     max-width: none;
   }
 }
-@media (max-width: 715px) {
-//TODO: add burger menu and modify img in welcome
+@media (max-width: 715px){
+//TODO: add burger menu and modify img in welcome block
 }
+

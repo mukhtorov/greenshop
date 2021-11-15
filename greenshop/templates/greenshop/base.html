@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="{% static 'greenshop/images/fav.png' %}">
     <link href="{% sass_src 'greenshop/css/base.scss' %}" rel="stylesheet" type="text/css" />
-    <title>Home Greenshop</title>
+    <title>{% block title %}Home Greenshop{% endblock title %}</title>
 </head>
 <body>
 {% include 'greenshop/header.html' %}
@@ -32,5 +32,7 @@
             </div>
         </div>
     </div>
+{% include 'shop/shop.html' %}
+{% block shop %}{% endblock shop %}
 </body>
 </html>
