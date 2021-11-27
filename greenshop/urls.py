@@ -20,11 +20,14 @@ from django.urls import path, include
 from greenshop import settings
 from greenshop.views import *
 
+app_name = 'home'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('plants/', include('apps.shop.urls', namespace='shop')),
+    path('', home, name='homepage'),
+    path('shop/', include('apps.shop.urls', namespace='shop')),
+
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -2,14 +2,6 @@ from django.shortcuts import render, get_object_or_404
 from .models import Plant, Category
 
 
-def categories_count(request):
-    categories = Category.objects.all()
-    data = dict()
-    for category in categories:
-        data[str(category)] = Plant.objects.filter(category__name=category).count()
-    return render(request, 'shop/shop.html', {'data': data})
-
-
 def plant_list(request, category_slug=None):
     category = None
     plants = Plant.objects.filter(available=True)

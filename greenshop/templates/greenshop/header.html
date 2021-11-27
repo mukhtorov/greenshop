@@ -8,7 +8,7 @@
                     <img class="logo__text" src="{% static 'greenshop/images/Group.svg' %}" alt="" >
                 </div>
                 <div class="menu">
-                    <a href="#!" class="menu__link">Home</a>
+                    <a href="#!" class="menu__link active">Home</a>
                     <a href="#!" class="menu__link">Shop</a>
                     <a href="#!" class="menu__link">Plant Care</a>
                     <a href="#!" class="menu__link">Blogs</a>
@@ -16,7 +16,34 @@
                 <div class="shop-elements">
                     <img src="{% static 'greenshop/images/search.svg' %}" alt="search" class="shop-elements__search">
                     <img src="{% static 'greenshop/images/cart.svg' %}" alt="cart" class="shop-elements__cart">
-                    <a href="#!" class="shop-elements__button button"><button>Login</button></a>
+                    {% if user.is_authenticated %}
+                        <a  class="shop-elements__button button"><button>Logout</button></a>
+                    {% else %}
+                        <a  class="shop-elements__button button"><button>Login</button></a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="popup-overlay"></div>
+            <div class="popup">
+                <div id="popup-close-button"><a href="#"></a></div>
+                <div class="popup__content">
+                    <div class="popup__header">
+                        <div id="sign-in">Login</div>
+                        <i class="dividing-line"></i>
+                        <div id="register">Register</div>
+                    </div>
+                    <div class="popup__forms">
+                        <form class="sign-in" method="post">
+                            {% csrf_token %}
+                            {{ formlog}}
+                            <input type="submit" value="Submit">
+                        </form>
+                        <form class="register" method="post">
+                            {% csrf_token %}
+                            {{ formreg }}
+                            <input type="submit" value="Submit" >
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

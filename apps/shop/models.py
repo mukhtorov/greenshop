@@ -15,7 +15,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('shop:plant_list_by_category', args=[self.slug])
+        pass
 
 
 class Plant(models.Model):

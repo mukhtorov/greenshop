@@ -1,0 +1,36 @@
+{% load sass_tags %}
+{% load static %}
+<link rel="stylesheet" href="{% sass_src 'shop/css/base.scss' %}">
+
+{% block shop %}
+    <div class="shop">
+        <div class="container">
+            <div class="shop__row">
+                <div class="column2">
+                    <div class="shop__categories">
+                        <div class="shop__categories-list">
+                            <div style="display: flex" class="flexer">
+                                <div class="categ">
+                                    {% for categ in data.keys %}
+                                        <p>{{ categ }}</p>
+                                    {% endfor %}
+                                </div>
+                                <div style="margin-left: 15px" class="count">
+                                    {% for count in data.values %}
+                                        <p>({{ count }})</p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop__plants-filter"></div>
+                    </div>
+                    <div class="shop__super-promotion"></div>
+                </div>
+                <div class="shop__stall column2">
+                    {% include 'shop/list_view.html' %}
+                    {% block list_view %}{% endblock list_view %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
