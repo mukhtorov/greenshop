@@ -1,0 +1,31 @@
+.shop{
+  &__row{
+    display: flex;
+  }
+  &__filters-and-promotion{
+      padding: 15px 18px;
+  }
+  &__stall{
+    flex: 1 1 100%;
+  }
+
+}
+
+.filters{
+  background-color: #FBFBFB;
+  &__categories{
+    display: flex;
+    &-name{}
+    &-count{}
+  }
+  &__price-range{}
+  &__size-filter{}
+
+}
+
+.shorting-panel{
+  display: flex;
+  justify-content: space-between;
+  &__state{}
+  &__fields{}
+}

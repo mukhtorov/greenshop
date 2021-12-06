@@ -61,7 +61,9 @@
       }
     }
   }
-  .popup-overlay{
+}
+
+.popup-overlay{
     position: fixed;
     left: 0;
     top: 0;
@@ -77,7 +79,7 @@
       visibility: visible;
     }
   }
-  .popup{
+.popup{
     position: fixed;
     left: 0;
     top: 15%;
@@ -199,11 +201,10 @@
       transform: rotate(-45deg);
     }
   }
-  @media (min-width: 500px) {
-    .popup {
-      width: 500px;
-      left: 50%;
-      margin: 0 0 0 -250px;
-    }
+@media (min-width: 500px) {
+  .popup {
+    width: 500px;
+    left: 50%;
+    margin: 0 0 0 -250px;
   }
 }

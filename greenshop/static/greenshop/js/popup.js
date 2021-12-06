@@ -1,13 +1,13 @@
 $(function() {
   //defining all needed variables
   var $overlay = $('.popup-overlay');
-  var $mainPopUp = $('.popup')
+  var $mainPopUp = $('.popup');
   var $signIn = $('#sign-in');
   var $register = $('#register');
   var $formSignIn = $('form.sign-in');
   var $formRegister = $('form.register');
 
-  $('.shop-elements__button > button').on('click', function(){
+  $('.popup_active').on('click', function(){
     $overlay.addClass('visible');
     $mainPopUp.addClass('visible');
     $signIn.addClass('active');

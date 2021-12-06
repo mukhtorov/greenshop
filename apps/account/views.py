@@ -1,11 +1,8 @@
-from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import render, redirect
-from django.contrib import messages
-
-from apps.account.forms import *
+from django.contrib.auth import logout, authenticate
+from django.shortcuts import redirect
 
 
 def test_logout(request):
     logout(request)
-    # messages.info(request, "You have successfully logged out.")
     return redirect("homepage")
+

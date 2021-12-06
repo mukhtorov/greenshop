@@ -17,9 +17,9 @@
                     <img src="{% static 'greenshop/images/search.svg' %}" alt="search" class="shop-elements__search">
                     <img src="{% static 'greenshop/images/cart.svg' %}" alt="cart" class="shop-elements__cart">
                     {% if user.is_authenticated %}
-                        <a  class="shop-elements__button button"><button>Logout</button></a>
+                        <a  href="{% url 'account:logout' %}" class="shop-elements__button button"><button>Logout</button></a>
                     {% else %}
-                        <a  class="shop-elements__button button"><button>Login</button></a>
+                        <a  class="shop-elements__button popup_active button"><button>Login</button></a>
                     {% endif %}
                 </div>
             </div>
@@ -33,12 +33,12 @@
                         <div id="register">Register</div>
                     </div>
                     <div class="popup__forms">
-                        <form class="sign-in" method="post">
+                        <form action="{% url 'routes:login' %}" class="sign-in" method="post">
                             {% csrf_token %}
                             {{ formlog}}
-                            <input type="submit" value="Submit">
+                            <input name="loginform" type="submit" value="Submit">
                         </form>
-                        <form class="register" method="post">
+                        <form action="{% url 'routes:register' %}" class="register" method="post">
                             {% csrf_token %}
                             {{ formreg }}
                             <input type="submit" value="Submit" >

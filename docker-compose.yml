@@ -4,7 +4,9 @@ services:
   db:
     container_name: dev_db
     image: postgres:12-alpine
-    env_file: dev.env
+    env_file:
+      - env/postgres.env
+      - env/core.env
     volumes:
       - .pg_data/:/var/lib/postgresql/data
     ports:
@@ -12,7 +14,10 @@ services:
 
   web:
     container_name: dev_backend
-    env_file: dev.env
+    env_file:
+      - env/django.env
+      - env/core.env
+
     build:
       context: .
     command: python manage.py runserver 0.0.0.0:8000

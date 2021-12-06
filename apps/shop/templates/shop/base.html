@@ -6,29 +6,35 @@
     <div class="shop">
         <div class="container">
             <div class="shop__row">
-                <div class="column2">
-                    <div class="shop__categories">
-                        <div class="shop__categories-list">
-                            <div style="display: flex" class="flexer">
-                                <div class="categ">
-                                    {% for categ in data.keys %}
-                                        <p>{{ categ }}</p>
-                                    {% endfor %}
-                                </div>
-                                <div style="margin-left: 15px" class="count">
-                                    {% for count in data.values %}
-                                        <p>({{ count }})</p>
-                                    {% endfor %}
-                                </div>
+                <div class="shop__filters-and-promotion column2">
+                    <div class="filters">
+                        <div class="filters__categories">
+                            <div class="filters__categories-name">
+                                {% for categ in data.keys %}
+                                    <p>{{ categ }}</p>
+                                {% endfor %}
+                            </div>
+                            <div class="filters__categories-count" style="margin-left: 15px" >
+                                {% for count in data.values %}
+                                    <p>({{ count }})</p>
+                                {% endfor %}
                             </div>
                         </div>
-                        <div class="shop__plants-filter"></div>
+                        <div class="filters__price-range">PRICE RANGE</div>
+                        <div class="filters__size-filter">SIZE FILTER</div>
                     </div>
-                    <div class="shop__super-promotion"></div>
+                    <div class="shop__super-promotion">SUPER PROMOTION</div>
                 </div>
                 <div class="shop__stall column2">
-                    {% include 'shop/list_view.html' %}
-                    {% block list_view %}{% endblock list_view %}
+                    <div class="shorting-panel">
+                        <div class="shorting-panel__state">
+                            <div class="">All Plants</div>
+                            <div class="">New Arrivals</div>
+                            <div class="">Sale</div>
+                        </div>
+                        <div class="shorting-panel__fields">Short by:</div>
+                    </div>
+                    <p>PLants list</p>
                 </div>
             </div>
         </div>

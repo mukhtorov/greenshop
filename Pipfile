@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-compressor = "==2.4.1"
+django-sass-processor = "==1.1"
+psycopg2-binary = "==2.9.1"
+social-auth-app-django = "==5.0.0"
+Django = "==3.2.8"
+Pillow = "==8.4.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

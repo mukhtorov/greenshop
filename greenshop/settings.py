@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.shop.apps.ShopConfig',
     'apps.account.apps.AccountConfig',
     'sass_processor',
+    'social_django',
 
 ]
 
@@ -66,6 +67,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -88,6 +91,10 @@ DATABASES = {
   }
 }
 
+# When using PostgreSQL, it’s recommended to use the built-in JSONB field to store the extracted extra_data.
+# https://python-social-auth.readthedocs.io/en/latest/configuration/django.html#database
+# SOCIAL_AUTH_JSONFIELD_ENABLED = True
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -105,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = os.getenv('TZ')
 
 USE_I18N = True
 
@@ -143,3 +150,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = BASE_DIR / 'media/'
 MEDIA_URL = '/media/'
 # AUTH_USER_MODEL = 'account.Profile'
+
+# In case you need a custom namespace for urls, SOCIAL_AUTH_URL_NAMESPACE setting is also needed:
+# https://python-social-auth.readthedocs.io/en/latest/configuration/django.html#urls-entries
+# SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+AUTH_USER_MODEL = 'account.User'

@@ -1,7 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.generic.base import TemplateView
+from django.contrib.auth import (authenticate, login, logout)
+from django.contrib.auth.models import User
 
 from apps.shop.models import Plant, Category
 from apps.account.forms import *
+
+
+class HomeHandlerView(TemplateView):
+    pass
 
 
 def home(request):
